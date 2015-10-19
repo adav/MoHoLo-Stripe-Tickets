@@ -11,7 +11,7 @@ get '/' do
   erb :checkout
 end
 
-post '/paypig' do
+post '/pay' do
   quantity = params[:quantity].to_i > 0 ? params[:quantity].to_i : 1
   @amount = 800 * quantity
 
@@ -22,7 +22,7 @@ post '/paypig' do
 
   charge = Stripe::Charge.create(
     :amount      => @amount,
-    :description => "#{quantity}x Blind Pig Party Ticket",
+    :description => "#{quantity}x MoHoLo Event Ticket",
     :currency    => 'gbp',
     :customer    => customer
   )

@@ -21,7 +21,7 @@
     image: '/img/mlogo.png',
     token: function(token) {
      $.ajax({
-          url: '/paypig',
+          url: '/pay',
           type: 'POST',
           data: {
               stripeToken: token.id,
@@ -38,7 +38,7 @@
   $('#buyButton').on('click', function(e) {
     var quantity = Number(document.getElementById("quantity").value);
     handler.open({
-      name: 'Blind Pig Party',
+      name: 'MoHoLo Event Ticket',
       description: quantity + 'x Ticket',
       currency: "gbp",
       zipCode: true,

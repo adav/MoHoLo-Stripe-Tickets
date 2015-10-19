@@ -24,15 +24,15 @@ label {
 	text-align: center;
 }
 
-@font-face {
+/*@font-face {
     font-family: artdeco;
     src: url(artdeco.ttf);
-}
+}*/
 
-.artdeco {
+/*.artdeco {
 	font-family: artdeco;
-}
+}*/
 
-p {
+/*p {
 	font-family: monospace;
-}
+}*/
