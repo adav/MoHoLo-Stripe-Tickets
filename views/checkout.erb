@@ -1,0 +1,54 @@
+<img src="/img/pig.png"/ style="margin-left: 23px; margin-bottom: 30px; width: 25%;"><br>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+<form class="pure-form">
+  <select id="quantity">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+        </select>
+  <button id="buyButton" class="pure-button pure-button-primary button-large">Buy Tickets</button>
+</form>
+
+<script>
+  var handler = StripeCheckout.configure({
+    key: '<%= settings.publishable_key %>',
+    image: '/img/mlogo.png',
+    token: function(token) {
+     $.ajax({
+          url: '/paypig',
+          type: 'POST',
+          data: {
+              stripeToken: token.id,
+              stripeEmail: token.email,
+              quantity: Number(document.getElementById("quantity").value)
+          },
+          success: function(response){
+            window.location.href = '/seeyousoon' ;
+          }
+      });
+    }
+  });
+
+  $('#buyButton').on('click', function(e) {
+    var quantity = Number(document.getElementById("quantity").value);
+    handler.open({
+      name: 'Blind Pig Party',
+      description: quantity + 'x Ticket',
+      currency: "gbp",
+      zipCode: true,
+      allowRememberMe: false,
+      amount: quantity * 800
+    });
+    e.preventDefault();
+  });
+
+  $(window).on('popstate', function() {
+    handler.close();
+  });
+</script>
