@@ -22,7 +22,7 @@ post '/pay' do
 
   charge = Stripe::Charge.create(
     :amount      => @amount,
-    :description => "#{quantity}x MoHoLo Event Ticket",
+    :description => "#{quantity}x Earlybird JGLG Fireworks at MoHoLo Event Ticket",
     :currency    => 'gbp',
     :customer    => customer
   )
