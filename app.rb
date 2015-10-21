@@ -11,12 +11,12 @@ set :ticket_price, ENV['TICKET_PRICE_PENCE'].to_i
 Stripe.api_key = settings.secret_key
 
 get '/' do
-  erb :checkout, :locals => {:name => :ticket_name, :price => :ticket_price}
+  erb :checkout
 end
 
 post '/pay' do
   quantity = params[:quantity].to_i > 0 ? params[:quantity].to_i : 1
-  @amount = :ticket_price * quantity
+  @amount = settings.ticket_price * quantity
 
   customer = Stripe::Customer.create(
     :email => params[:stripeEmail],
@@ -25,7 +25,7 @@ post '/pay' do
 
   charge = Stripe::Charge.create(
     :amount      => @amount,
-    :description => "#{quantity}x #{:ticket_name} Ticket",
+    :description => "#{quantity}x #{settings.ticket_name} Ticket",
     :currency    => 'gbp',
     :customer    => customer
   )

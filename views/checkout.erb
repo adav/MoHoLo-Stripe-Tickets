@@ -38,12 +38,12 @@
   $('#buyButton').on('click', function(e) {
     var quantity = Number(document.getElementById("quantity").value);
     handler.open({
-      name: '<%= name %>',
+      name: '<%= settings.ticket_name %>',
       description: quantity + 'x Ticket',
       currency: "gbp",
       zipCode: true,
       allowRememberMe: false,
-      amount: quantity * <%= price %>
+      amount: quantity * <%= settings.ticket_price %>
     });
     e.preventDefault();
   });
