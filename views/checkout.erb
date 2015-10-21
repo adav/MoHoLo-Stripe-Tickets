@@ -38,12 +38,12 @@
   $('#buyButton').on('click', function(e) {
     var quantity = Number(document.getElementById("quantity").value);
     handler.open({
-      name: 'JGLGxMoHoLo Earlybird Ticket',
+      name: '<%= name %>',
       description: quantity + 'x Ticket',
       currency: "gbp",
       zipCode: true,
       allowRememberMe: false,
-      amount: quantity * 800
+      amount: quantity * <%= price %>
     });
     e.preventDefault();
   });
