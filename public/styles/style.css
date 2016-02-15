@@ -54,7 +54,7 @@ label {
 }
 
 
-form * {
+form *, form * * {
   font-size: 25px;
 }
 
