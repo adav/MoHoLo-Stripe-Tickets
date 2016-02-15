@@ -28,6 +28,7 @@ post '/pay' do
     :amount      => @amount,
     :description => "#{quantity}x #{settings.ticket_name} Ticket",
     :currency    => 'gbp',
+    :metadata => {"fullname" => params[:fullname]},
     :customer    => customer
   )
 
