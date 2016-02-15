@@ -24,14 +24,14 @@ label {
 	text-align: center;
 }
 
-/*@font-face {
-    font-family: artdeco;
-    src: url(artdeco.ttf);
-}*/
+@font-face {
+    font-family: harryp;
+    src: url(harryp.ttf);
+}
 
-/*.artdeco {
-	font-family: artdeco;
-}*/
+.harryp {
+	font-family: harryp;
+}
 
 /*p {
 	font-family: monospace;
