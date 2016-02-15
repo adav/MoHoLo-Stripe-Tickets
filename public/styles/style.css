@@ -47,9 +47,15 @@ label {
   height: 100%;
   position: fixed;
   background: url(/img/cat.png);
-  background-size: 70%;
+  background-size: 50%;
   background-repeat: no-repeat;
   background-position: bottom;
+  z-index: -1;
+}
+
+
+form * {
+  font-size: 25px;
 }
 
 /*p {
