@@ -54,7 +54,7 @@ label {
 }
 
 
-form *, form * * {
+form *, optgroup {
   font-size: 25px;
 }
 
