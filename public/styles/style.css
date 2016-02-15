@@ -1,5 +1,5 @@
-html { 
-  background: url(/img/background.jpg) no-repeat center center fixed; 
+html {
+  background: url(/img/galaxy.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -25,12 +25,21 @@ label {
 }
 
 @font-face {
-    font-family: harryp;
-    src: url(harryp.ttf);
+    font-family: hipfont;
+    src: url(Besom.ttf);
 }
 
-.harryp {
-	font-family: harryp;
+.hipfont {
+	font-family: hipfont;
+}
+
+#outer {
+  width: 100%;
+  height: 100%;
+  background: url(/img/cat.png);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 /*p {

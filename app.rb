@@ -20,7 +20,8 @@ post '/pay' do
 
   customer = Stripe::Customer.create(
     :email => params[:stripeEmail],
-    :card  => params[:stripeToken]
+    :card  => params[:stripeToken],
+    :metadata => {"fullname" => params[:fullname]}
   )
 
   charge = Stripe::Charge.create(
