@@ -33,9 +33,19 @@ label {
 	font-family: hipfont;
 }
 
-#outer {
+@font-face {
+    font-family: super;
+    src: url(super.ttf);
+}
+
+.superfont {
+	font-family: super;
+}
+
+#catback {
   width: 100%;
   height: 100%;
+  position: fixed;
   background: url(/img/cat.png);
   background-size: 70%;
   background-repeat: no-repeat;
