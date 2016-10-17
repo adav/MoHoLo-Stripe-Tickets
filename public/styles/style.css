@@ -31,6 +31,7 @@ label {
 
 .hipfont {
 	font-family: hipfont;
+  text-shadow: 2px 2px 8px #FF0000;
 }
 
 @font-face {
@@ -42,7 +43,7 @@ label {
 	font-family: super;
 }
 
-#catback {
+/*#catback {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -51,7 +52,7 @@ label {
   background-repeat: no-repeat;
   background-position: bottom;
   z-index: -1;
-}
+}*/
 
 
 form *, optgroup {
