@@ -21,7 +21,7 @@ label {
 }
 
 .tfl {
-	font-family: tfl;
+	font-family: tfl !important;
 }
 
 @font-face {
