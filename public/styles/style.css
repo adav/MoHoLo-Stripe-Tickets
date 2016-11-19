@@ -1,9 +1,5 @@
 html {
-  background: url(/img/galaxy.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url(/img/tubetiles.jpg) repeat;
 }
 
 form {
@@ -22,6 +18,15 @@ label {
 	padding: 5%;
 	border: double;
 	text-align: center;
+}
+
+.tfl {
+	font-family: tfl;
+}
+
+@font-face {
+    font-family: tfl;
+    src: url(underground.ttf);
 }
 
 @font-face {
